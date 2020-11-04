@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Restaurant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d9ff8742ac.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <button class="burger-btn">
+        <div class="burger-box">
+            <div class="burger-bars"></div>
+        </div>
+    </button>
+    <nav>
+        <div class="nav-items">
+            <a href="#menu" class="nav-item">menu</a>
+            <a href="#discount" class="nav-item">promocje</a>
+            <a href="#reviews" class="nav-item">opinie</a>
+            <a href="#contact" class="nav-item">kontakt</a>
+        </div>
+    </nav>
+    <header>
+        <div class="header-hero-img">
+            <div class="header-text">
+                <h1>witaj w rajskiej pizzy <i class="fas fa-pizza-slice"></i></h1>
+            </div>
+                <div class="header-btn"><a href="#menu"><button class="header-btn">
+                    <h2>menu</h2>
+                </button></a>
+            </div>
+
+            
+            
+            <a href="#menu"> <i class="fas fa-arrow-down header-arrow"></i> </a>
+        </div>
+    </header>
+    <main>
+        <section class="menu" id="menu">
+            <div class="wrapper">
+                <div class="menu-search">
+                <form class="menu-form">
+                <h4>wszystkie</h4>
+                <input type="radio" class="menu-radio all" checked onclick="showAll()" name="qwe">
+                <h4>małe</h4>
+                <input type="radio" class="menu-radio small" onclick="showSmall()" name="qwe">
+                <h4>średnie</h4>
+                <input type="radio" class="menu-radio medium" onclick="showMedium()" name="qwe">
+                <h4>duże</h4>
+                <input type="radio" class="menu-radio large" onclick="showLarge()" name="qwe">
+            </form>
+            </div>
+            <div class="menu-small-pizza">
+                <h1>małe pizze<hr class="red-hr"></h1>
+                <div class="menu-pizzas">
+                    <div class="menu-pizza">
+                        <div class="menu-pizza-img"><img src="img/pizzaoliwkoa.jpg" alt="pizza z oliwkami"></div>
+                        <div class="menu-pizza-description">
+                            <h2 class="menu-name">Oliwkowa</h2>
+                            <p>Rozmiar: 25cm <p> Przepyszna pizza oliwkowa</p></p>
+                        </div>
+                        <hr class="hr">
+                        <p class="menu-pizza-price">25,99 zł</p> <button class="menu-pizza-order">zamów</button>
+                    </div>
+                    <div class="menu-pizza">
+                        <div class="menu-pizza-img"><img src="img/pizza-peproni.jpg" alt="pizza peproni"></div>
+                        <div class="menu-pizza-description">
+                            <h2 class="menu-name">pepperoni</h2>
+                            <p>Rozmiar: 25cm <p> Przepyszna pizza pepperoni</p></p>
+                        </div>
+                        <hr class="hr">
+                        <p class="menu-pizza-price">25,99 zł</p> <button class="menu-pizza-order">zamów</button>
+                    </div>
+                    <div class="menu-pizza">
+                        <div class="menu-pizza-img"><img src="img/pizza-wloska.jpg" alt="pizza ala wloska z rukola na gorze"></div>
+                        <div class="menu-pizza-description">
+                            <h2 class="menu-name">serowa</h2>
+                            <p>Rozmiar: 25cm <p> Przepyszna pizza serowa</p></p>
+                        </div>
+                        <hr class="hr">
+                        <p class="menu-pizza-price">25,99 zł</p> <button class="menu-pizza-order">zamów</button>
+                    </div>
+                    <div class="menu-pizza">
+                        <div class="menu-pizza-img"><img src="img/pizza-oliwkoa.jpg" alt="pizza z oliwkami i serem"></div>
+                        <div class="menu-pizza-description">
+                            <h2 class="menu-name">wiejska</h2>
+                            <p>Rozmiar: 25cm <p> Przepyszna pizza wiejska</p></p>
+                        </div>
+                        <hr class="hr">
+                        <p class="menu-pizza-price">25,99 zł</p> <button class="menu-pizza-order">zamów</button>
+                    </div>
+                    <div class="menu-pizza">
+                        <div class="menu-pizza-img"><img src="img/pizza-small.jpg" alt="pizza z rukola serem"></div>
+                        <div class="menu-pizza-description">
+                            <h2 class="menu-name">MARGHERITA</h2>
+                            <p>Rozmiar: 25cm <p> Przepyszna pizza MARGHERITA</p></p>
+                        </div>
+                        <hr class="hr">
+                        <p class="menu-pizza-price">25,99 zł</p> <button class="menu-pizza-order">zamów</button>
+                    </div>
+                    <div class="menu-pizza">
+                        <div class="menu-pizza-img"><img src="img/pizza-vege.jpg" alt="pizza vege"></div>
+                        <div class="menu-pizza-description">
+                            <h2 class="menu-name">wegetariańska</h2>
+                            <p>Rozmiar: 25cm <p> Przepyszna pizza wegetariańska</p></p>
+                        </div>
+                        <hr class="hr">
+                        <p class="menu-pizza-price">25,99 zł</p> <button class="menu-pizza-order">zamów</button>
+                    </div>
+                    <div class="menu-pizza">
+                        <div class="menu-pizza-img"><img src="img/pizza-margaritta.jpg" alt="pizza tradycyjna"></div>
+                        <div class="menu-pizza-description">
+                            <h2 class="menu-name">capricciosa</h2>
+                            <p>Rozmiar: 25cm <p> Przepyszna pizza capricciosa</p></p>
+                        </div>
+                        <hr class="hr">
+                        <p class="menu-pizza-price">25,99 zł</p> <button class="menu-pizza-order">zamów</button>
+                    </div>
+                    <div class="menu-pizza">
+                        <div class="menu-pizza-img"><img src="img/pizaa-rukola.jpg" alt="pizza z masa rukoli"></div>
+                        <div class="menu-pizza-description">
+                            <h2 class="menu-name">pikantna</h2>
+                            <p>Rozmiar: 25cm <p> Przepyszna pizza pikantna</p></p>
+                        </div>
+                        <hr class="hr">
+                        <p class="menu-pizza-price">25,99 zł</p> <button class="menu-pizza-order">zamów</button>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            <div class="menu-medium-pizza">
+                <h1>średnie pizze<hr class="red-hr"></h1>
+                <div class="menu-pizzas">
+                    <div class="menu-pizza">
+                        <div class="menu-pizza-img"><img src="img/pizzaoliwkoa.jpg" alt="pizza z oliwkami"></div>
+                        <div class="menu-pizza-description">
+                            <h2 class="menu-name">Oliwkowa</h2>
+                            <p>Rozmiar: 34cm <p> Przepyszna pizza oliwkowa</p></p>
+                        </div>
+                        <hr class="hr">
+                        <p class="menu-pizza-price">30,99 zł</p> <button class="menu-pizza-order">zamów</button>
+                    </div>
+                    <div class="menu-pizza">
+                        <div class="menu-pizza-img"><img src="img/pizza-peproni.jpg" alt="pizza peproni"></div>
+                        <div class="menu-pizza-description">
+                            <h2 class="menu-name">pepperoni</h2>
+                            <p>Rozmiar: 34cm <p> Przepyszna pizza pepperoni</p></p>
+                        </div>
+                        <hr class="hr">
+                        <p class="menu-pizza-price">30,99 zł</p> <button class="menu-pizza-order">zamów</button>
+                    </div>
+                    <div class="menu-pizza">
+                        <div class="menu-pizza-img"><img src="img/pizza-wloska.jpg" alt="pizza ala wloska z rukola na gorze"></div>
+                        <div class="menu-pizza-description">
+                            <h2 class="menu-name">serowa</h2>
+                            <p>Rozmiar: 34cm <p> Przepyszna pizza serowa</p></p>
+                        </div>
+                        <hr class="hr">
+                        <p class="menu-pizza-price">30,99 zł</p> <button class="menu-pizza-order">zamów</button>
+                    </div>
+                    <div class="menu-pizza">
+                        <div class="menu-pizza-img"><img src="img/pizza-oliwkoa.jpg" alt="pizza z oliwkami i serem"></div>
+                        <div class="menu-pizza-description">
+                            <h2 class="menu-name">wiejska</h2>
+                            <p>Rozmiar: 34cm <p> Przepyszna pizza wiejska</p></p>
+                        </div>
+                        <hr class="hr">
+                        <p class="menu-pizza-price">30,99 zł</p> <button class="menu-pizza-order">zamów</button>
+                    </div>
+                    <div class="menu-pizza">
+                        <div class="menu-pizza-img"><img src="img/pizza-small.jpg" alt="pizza z rukola i serem"></div>
+                        <div class="menu-pizza-description">
+                            <h2 class="menu-name">MARGHERITA</h2>
+                            <p>Rozmiar: 34cm <p> Przepyszna pizza MARGHERITA</p></p>
+                        </div>
+                        <hr class="hr">
+                        <p class="menu-pizza-price">30,99 zł</p> <button class="menu-pizza-order">zamów</button>
+                    </div>
+                    <div class="menu-pizza">
+                        <div class="menu-pizza-img"><img src="img/pizza-vege.jpg" alt="pizza vege"></div>
+                        <div class="menu-pizza-description">
+                            <h2 class="menu-name">wegetariańska</h2>
+                            <p>Rozmiar: 34cm <p> Przepyszna pizza wegetariańska</p></p>
+                        </div>
+                        <hr class="hr">
+                        <p class="menu-pizza-price">30,99 zł</p> <button class="menu-pizza-order">zamów</button>
+                    </div>
+                    <div class="menu-pizza">
+                        <div class="menu-pizza-img"><img src="img/pizza-margaritta.jpg" alt="pizza tradycyjna"></div>
+                        <div class="menu-pizza-description">
+                            <h2 class="menu-name">capricciosa</h2>
+                            <p>Rozmiar: 34cm <p> Przepyszna pizza capricciosa</p></p>
+                        </div>
+                        <hr class="hr">
+                        <p class="menu-pizza-price">30,99 zł</p> <button class="menu-pizza-order">zamów</button>
+                    </div>
+                    <div class="menu-pizza">
+                        <div class="menu-pizza-img"><img src="img/pizaa-rukola.jpg" alt="pizza z masa rukoli"></div>
+                        <div class="menu-pizza-description">
+                            <h2 class="menu-name">pikantna</h2>
+                            <p>Rozmiar: 34cm <p> Przepyszna pizza pikantna</p></p>
+                        </div>
+                        <hr class="hr">
+                        <p class="menu-pizza-price">30,99 zł</p> <button class="menu-pizza-order">zamów</button>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            <div class="menu-large-pizza">
+                <h1>duże pizze<hr class="red-hr"></h1>
+                <div class="menu-pizzas">
+                    <div class="menu-pizza">
+                        <div class="menu-pizza-img"><img src="img/pizzaoliwkoa.jpg" alt="pizza z oliwkami"></div>
+                        <div class="menu-pizza-description">
+                            <h2 class="menu-name">oliwkowa</h2>
+                            <p>Rozmiar: 40cm <p> Przepyszna pizza oliwkowa</p></p>
+                        </div>
+                        <hr class="hr">
+                        <p class="menu-pizza-price">35,99 zł</p> <button class="menu-pizza-order">zamów</button>
+                    </div>
+                    <div class="menu-pizza">
+                        <div class="menu-pizza-img"><img src="img/pizza-peproni.jpg" alt="pizza peproni"></div>
+                        <div class="menu-pizza-description">
+                            <h2 class="menu-name">pepperoni</h2>
+                            <p>Rozmiar: 40cm <p> Przepyszna pizza pepperoni</p></p>
+                        </div>
+                        <hr class="hr">
+                        <p class="menu-pizza-price">35,99 zł</p> <button class="menu-pizza-order">zamów</button>
+                    </div>
+                    <div class="menu-pizza">
+                        <div class="menu-pizza-img"><img src="img/pizza-wloska.jpg" alt="pizza ala wloska z rukola na gorze"></div>
+                        <div class="menu-pizza-description">
+                            <h2 class="menu-name">serowa</h2>
+                            <p>Rozmiar: 40cm <p> Przepyszna pizza serowa</p></p>
+                        </div>
+                        <hr class="hr">
+                        <p class="menu-pizza-price">35,99 zł</p> <button class="menu-pizza-order">zamów</button>
+                    </div>
+                    <div class="menu-pizza">
+                        <div class="menu-pizza-img"><img src="img/pizza-oliwkoa.jpg" alt="pizza z oliwkami i serem"></div>
+                        <div class="menu-pizza-description">
+                            <h2 class="menu-name">wiejska</h2>
+                            <p>Rozmiar: 40cm <p> Przepyszna pizza wiejska</p></p>
+                        </div>
+                        <hr class="hr">
+                        <p class="menu-pizza-price">35,99 zł</p> <button class="menu-pizza-order">zamów</button>
+                    </div>
+                    <div class="menu-pizza">
+                        <div class="menu-pizza-img"><img src="img/pizza-small.jpg" alt="pizza z rukola i serem"></div>
+                        <div class="menu-pizza-description">
+                            <h2 class="menu-name">MARGHERITA</h2>
+                            <p>Rozmiar: 40cm <p> Przepyszna pizza MARGHERITA</p></p>
+                        </div>
+                        <hr class="hr">
+                        <p class="menu-pizza-price">35,99 zł</p> <button class="menu-pizza-order">zamów</button>
+                    </div>
+                    <div class="menu-pizza">
+                        <div class="menu-pizza-img"><img src="img/pizza-vege.jpg" alt="pizza vege"></div>
+                        <div class="menu-pizza-description">
+                            <h2 class="menu-name">wegetariańska</h2>
+                            <p>Rozmiar: 40cm <p> Przepyszna pizza wegetariańska</p></p>
+                        </div>
+                        <hr class="hr">
+                        <p class="menu-pizza-price">35,99 zł</p> <button class="menu-pizza-order">zamów</button>
+                    </div>
+                    <div class="menu-pizza">
+                        <div class="menu-pizza-img"><img src="img/pizza-margaritta.jpg" alt="pizza tradycyjna"></div>
+                        <div class="menu-pizza-description">
+                            <h2 class="menu-name">capricciosa</h2>
+                            <p>Rozmiar: 40cm <p> Przepyszna pizza capricciosa</p></p>
+                        </div>
+                        <hr class="hr">
+                        <p class="menu-pizza-price">35,99 zł</p> <button class="menu-pizza-order">zamów</button>
+                    </div>
+                    <div class="menu-pizza">
+                        <div class="menu-pizza-img"><img src="img/pizaa-rukola.jpg" alt="pizza z masa rukoli"></div>
+                        <div class="menu-pizza-description">
+                            <h2 class="menu-name">pikantna</h2>
+                            <p>Rozmiar: 40cm <p> Przepyszna pizza pikantna</p></p>
+                        </div>
+                        <hr class="hr">
+                        <p class="menu-pizza-price">35,99 zł</p> <button class="menu-pizza-order">zamów</button>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            </div>
+        </section>
+        <section class="discount" id="discount">
+            <div class="discount-box-one">
+            <div class="discount-hero-img">
+                <div class="discount-text">
+                    <h1>w tym tygodniu -50% na pizze skomponowana przez siebie</h1>
+                </div>
+                <div class="discount-btn"><button class="discount-btn">
+                            <h2>Skomponuj</h2>
+                        </button></div>
+            </div>
+        </div>
+            <div class="discount-box-two">
+            <div class="discount-hero-img">
+                <div class="discount-text">
+                    <h1>w poniedziałki druga pizza -75%</h1>
+                </div>
+                <div class="discount-btn"><button class="discount-btn">
+                            <h2>Zamów</h2>
+                        </button></div>
+            </div>
+        </div>
+        </section>
+        <section class="reviews" id="reviews">
+            <div class="wrapper">
+                <h1>opinie</h1>
+                <div class="under-line"></div>
+                <div class="reviews-icons"><i class="fas fa-thumbs-up"></i> <i class="fas fa-chart-line"></i> <i class="fas fa-smile-beam"></i></div>
+                <div class="reviews-boxes">
+                    <div class="review-box">
+                        <div class="review-box-img"><img src="/img/peopleone.jpg" alt="usmiechniety czlowiek"></div>
+                        <div class="review-box-text">Bardzo dobra pizza polecam.</div>
+                        <div class="review-box-icon"><i class="fas fa-quote-right"></i></div>
+                        <p>Adam Nowak</p>
+                    </div>
+                    <div class="review-box">
+                        <div class="review-box-img"><img src="/img/peopletwo.jpg" alt="usmiechniety czlowiek"></div>
+                        <div class="review-box-text">Najlepsza pizzeria na świecie.</div>
+                        <div class="review-box-icon"><i class="fas fa-quote-right"></i></div>
+                        <p>Anna Kowalska</p>
+                    </div>
+                    <div class="review-box">
+                        <div class="review-box-img"><img src="/img/peoplethree.jpg" alt="usmiechniety czlowiek"></div>
+                        <div class="review-box-text">Miła obsługa. Klimat był świetny.</div>
+                        <div class="review-box-icon"><i class="fas fa-quote-right"></i></div>
+                        <p>Klaudia Wiśniewska</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <section class="invite">
+            <div class="invite-box">
+                    <div class="invite-text"> Zapros znajomych do wspólnej uczty <i class="far fa-smile-beam"></i></div>
+            </div>
+        </section>
+        <section class="contact" id="contact">
+            <h2 class="contact-heading">Kontakt</h2>
+            <div class="under-line"></div>
+            <div class="wrapper">
+                <form class="contact-form">
+
+                    <div class="contact-form-top">
+                        <label for="name" class="contact-form-label">Imię i nazwisko:</label>
+                        <input type="text" class="contact-form-input" id="name">
+
+                        <label for="email" class="contact-form-label">Adres e-mail:</label>
+                        <input type="text" class="contact-form-input" id="email">
+                    </div>
+                    <label for="msg" class="contact-form-label">Wiadomość: </label>
+                    <textarea id="msg" class="contact-form-textarea"></textarea>
+
+                    <button type="submit" class="contact-form-btn">Wyślij</button>
+                </form>
+            </div>
+        </section>
+    </main>
+<footer>
+    <div class="wrapper">
+        <div class="footer-boxes">
+            <div class="footer-box">
+                <i class="fas fa-pizza-slice"></i> <span>TP CO.</span>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, ut!</p>
+                <i class="fab fa-instagram"></i> <i class="fab fa-twitter-square"></i> <i class="fab fa-facebook-square"></i>
+            </div>
+            <div class="footer-box">
+                <div class="footer-box-right">
+                <h1>o firmie</h1>
+                <a href="#">O nas</a>
+                <a href="#">Zarząd</a>
+                <a href="#">Kariera</a>
+                <a href="#">FAQ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <p class="footer-bottom-text"> &copy; <span class="footer-year"> </span> Rajska Pizza</p>
+</footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,603 @@
+*, *::after, *::before
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+$white: #eeeeee
+$dark: #373a40
+$grey: #686d76
+
+html
+    font-size: 62.5%
+    scroll-behavior: smooth
+
+body
+    font-size: 1.6rem
+    font-family: 'Montserrat', sans-serif
+.activeDisplay
+    display: block
+.noActiveDisplay
+    display: none
+
+// NAV
+.burger-btn:hover
+    .burger-box
+        .burger-bars::before,.burger-bars::after
+            width: 100%
+.burger-btn
+    position: fixed
+    top: 20px
+    right: 20px
+    padding: 1em
+    background: none
+    border: 11px solid transparent
+    cursor: pointer
+    z-index: 1000
+    .burger-box
+        position: relative
+        width: 40px
+        height: 30px
+        .burger-bars
+            width: 100%
+        .burger-bars::before
+            width: 60%
+            top: 13px
+        .burger-bars::after
+            width: 30%
+            top: 26px
+        .burger-bars,.burger-bars::before,.burger-bars::after
+            position: absolute
+            background: grey
+            right: 0
+            content: ''
+            transition: width .3s
+            height: 3px
+        .burger-bars::after
+            transition-delay: 0.1s
+.burger-btn:focus
+    outline: none
+    border: 1px solid rgba(255, 255, 255, .5)
+    border-radius: 8px
+nav
+    position: fixed
+    top: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    transform: translateX(100%)
+    background-image: url('/img/nav-bgc.jpg')
+    background-position: center
+    background-size: cover
+    height: 100vh
+    width: 100%
+    z-index: 100
+    transition: .5s cubic-bezier(0.65, 0.05, 0.36, 1)
+
+    .nav-items
+        .nav-item
+            position: relative
+            display: flex
+            flex-direction: column
+            color: $white
+            margin: 0.5em 0
+            padding: 0.5em 2em
+            font-size: 3.8rem
+            text-decoration: none
+            text-transform: uppercase
+            text-align: center
+        .nav-item::before,.nav-item::after
+            position: absolute
+            width: 0
+            height: 3px
+            background-color: $white
+            bottom: 0
+            content: ''
+            transition: width .3s
+        .nav-item::before
+            right: 50%
+        .nav-item::after
+            left: 50%
+        .nav-item:hover::before,.nav-item:hover::after
+            width: 35%
+.active
+    transform: translateX(0)
+@keyframes navItemsAnimation 
+    from 
+        transform: translateX(200%)
+    to 
+        transform: translateX(0)
+.nav-items-animation 
+    animation: navItemsAnimation 1s both
+
+
+// HEADER
+header
+    height: 100vh
+    width: 100%
+    background-image: url('../img/bgc-header.jpg')
+    background-position: center
+    background-size: cover
+    .header-hero-img
+        position: relative
+        height: 100vh
+        width: 100%
+        background-color: rgba(0,0,0,.7)
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        .header-arrow
+            position: absolute
+            color: white
+            font-size: 4rem
+            left: 50%
+            transform: translate(-50%)
+            bottom: 50px
+            padding: 2rem
+            cursor: pointer
+        .header-text
+            text-transform: uppercase
+            color: $white
+            margin-bottom: 4em
+            text-align: center
+            text-shadow: 0 0 2px white
+        .header-btn
+            position: relative
+            text-transform: uppercase
+            font-size: 2rem
+            padding: 1em
+            border: none
+            border-radius: 8px
+            background: none
+            color: $white
+            cursor: pointer
+        .header-btn::after,.header-btn::before
+            position: absolute
+            content: ''
+            width: 0
+            height: 0
+            opacity: 0
+            transition: opacity .3s , height .3s , width .3s
+        .header-btn::after
+            top: -2px
+            left: -8px
+            border-top: 2px solid #fff
+            border-left: 2px solid #fff
+        .header-btn::before
+            bottom: -2px
+            right: -8px
+            border-bottom: 2px solid #fff
+            border-right: 2px solid #fff
+        .header-btn:hover::before,.header-btn:hover::after
+            width: 50px
+            height: 50%
+            opacity: 1
+// MAIN
+    // menu
+main
+    .menu
+        height: 100%
+        width: 100%
+        background-color: #eee
+        .wrapper
+            margin: 0 auto
+            width: 100%
+            max-width: 1200px
+            .menu-search
+                width: 100%
+                height: 100%
+                padding: 50px
+                display: flex
+                justify-content: space-between
+                flex-wrap: wrap
+                .menu-form
+                    display: flex
+                    justify-content: space-between
+                    flex-wrap: wrap
+                    align-items: center
+                    margin: 0 auto
+                    h4
+                        margin: 0 30px
+                        text-transform: uppercase
+                        text-align: center
+                    .menu-radio
+                        width: 30px
+                        height: 30px
+                        cursor: pointer
+                        padding: 30px
+
+            h1
+                text-align: center
+                text-transform: uppercase
+                letter-spacing: 1px
+                padding-top: 20px
+                z-index: 1
+                .red-hr
+                    width: 100%
+                    border-color: tomato
+            .menu-pizzas
+                display: flex
+                flex-direction: row
+                flex-wrap: wrap
+                justify-content: center
+                align-items: center
+                .menu-pizza
+                    position: relative
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    align-items: center
+                    background-color: white
+                    height: 400px
+                    width: 250px
+                    margin: 2rem
+                    overflow: hidden
+                    .menu-pizza-img
+                        img
+                            position: absolute
+                            width: 100%
+                            height: 50%
+                            top: 0
+                            left: 0
+                            transition: transform .3s
+                        img:hover
+                            transform: scale(1.1)
+                    .menu-pizza-description
+                        position: absolute
+                        width: 100%
+                        height: 50%
+                        bottom: -10px
+                        padding: 0 10px
+                        z-index: 1
+                        h2
+                            text-align: center
+                            text-transform: uppercase
+                        p
+                            color: grey
+                            margin-top: 10px
+                    .hr
+                        border-color: rgba(191, 191, 191, 1)
+                        position: absolute
+                        bottom: 66px
+                        width: 100%
+                    .menu-pizza-order
+                        position: absolute
+                        width: 100px
+                        height: 50px
+                        bottom: 5px
+                        right: 5px
+                        padding: 0 10px
+                        z-index: 1
+                        border-radius: 8px
+                        border: none
+                        background: lime
+                        cursor: pointer
+                        text-transform: uppercase
+                        letter-spacing: 1px
+                        font-weight: bold
+                        color: white
+                        transition: background .3s
+                    .menu-pizza-order:hover
+                        background: red
+                    .menu-pizza-price
+                        position: absolute
+                        bottom: 23px
+                        left: 30px
+                        padding: 0 10px
+                        z-index: 1
+                        text-transform: uppercase
+                        font-weight: bold
+
+// DISCOUNT
+main
+    .discount
+        height: 100%
+        width: 100%
+        .discount-box-one,.discount-box-two
+            background-image: url('../img/handlepizza.jpg')
+            background-position: center
+            background-size: cover
+            background-attachment: fixed
+            .discount-hero-img
+                height: 100vh
+                width: 100%
+                background-color: rgba(0,0,0,.7)
+                display: flex
+                justify-content: center
+                align-items: center
+                flex-direction: column
+                .discount-text
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    text-transform: uppercase
+                    color: $white
+                    margin: 0 20px
+                    margin-bottom: 4em
+                    text-shadow: 0 0 2px white
+                    text-align: center
+                .discount-btn
+                    position: relative
+                    text-transform: uppercase
+                    font-size: 2rem
+                    padding: 1em
+                    border: none
+                    border-radius: 8px
+                    background: none
+                    color: $white
+                    cursor: pointer
+                .discount-btn::after,.discount-btn::before
+                    position: absolute
+                    content: ''
+                    width: 0
+                    height: 0
+                    opacity: 0
+                    transition: opacity .3s , height .3s
+                .discount-btn::after
+                    top: 50%
+                    left: 0
+                    border-left: 2px solid #fff
+                .discount-btn::before
+                    bottom: 50%
+                    left: 0
+                    border-left: 2px solid #fff
+                .discount-btn:hover::before,.discount-btn:hover::after
+                    height: 50%
+                    opacity: 1
+main
+    .discount
+        .discount-box-two
+            background-image: url('../img/pizza-two.jpg')
+
+// OPINION
+main
+    .reviews
+        background-color: $white
+        .wrapper
+            position: relative
+            margin: 0 auto
+            width: 100%
+            max-width: 1200px
+            h1
+                text-align: center
+                padding-top: 50px
+                padding-bottom: 5px
+                text-transform: uppercase
+            .under-line
+                position: absolute
+                width: 120px
+                height: 3px
+                background-color: royalblue
+                left: 50%
+                transform: translate(-50%)
+            .reviews-icons
+                display: flex
+                position: absolute
+                font-size: 4rem
+                top: 20%
+                left: 50%
+                transform: translate(-50%,-20%)
+                z-index: 1
+                i
+                    display: flex
+                    flex-wrap: wrap
+                    padding: 10px 50px
+                    text-shadow: 0 0 2px black
+                    transition: transform .3s
+                i:hover
+                    transform: scale(1.2)
+            .reviews-boxes
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 100%
+                height: 100vh
+                .review-box
+                    position: relative
+                    margin: 0 20px
+                    width: 400px
+                    height: 210px
+                    background-color: #fff
+                    transition: transform .3s
+                    p
+                        font-weight: bold
+                        position: absolute
+                        right: 10px
+                        bottom: 10px
+                    .review-box-img
+                        img
+                            position: absolute
+                            right: 5px
+                            top: 5px
+                            width: 80px
+                            height: 80px
+                            border-radius: 50%
+                            object-fit: cover
+                    .review-box-text
+                        position: absolute
+                        top: 50%
+                        left: 50%
+                        transform: translate(-50%,-50%)
+                        font-weight: bold
+                    .review-box-icon
+                        position: absolute
+                        top: 20px
+                        left: 30px
+                        font-size: 3rem
+                        color: royalblue
+                .review-box:hover
+                    transform: scale(.95)
+// invite
+main
+    .invite
+        height: 100vh
+        width: 100%
+        background-image: url('/img/friends.jpg')
+        background-attachment: fixed
+        background-position: center
+        background-size: cover
+        .invite-box
+            display: flex
+            background-color: rgba(0,0,0,.7)
+            width: 100%
+            height: 100%
+            position: relative
+            .invite-text
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%,-50%)
+                font-weight: bold
+                letter-spacing: 1px
+                text-align: center
+                text-transform: uppercase
+                font-size: 1.4em
+                color: white
+                text-shadow: 0 0 2px white
+
+main
+    .contact
+        height: 100vh
+        width: 100%
+        background-color: $white
+        .contact-heading
+            text-align: center
+            padding-top: 50px
+            padding-bottom: 5px
+            text-transform: uppercase
+        .under-line
+            position: absolute
+            width: 120px
+            height: 3px
+            background-color: royalblue
+            left: 50%
+            transform: translate(-50%)
+        .wrapper
+            margin: 0 auto
+            width: 100%
+            max-width: 1200px
+            .contact-form
+                display: flex
+                flex-direction: column
+                padding: 0 50px
+                padding-top: 20px
+                .contact-form-top
+                    display: flex
+                    flex-direction: column
+                    .contact-form-label
+                        margin-bottom: 1em
+                        text-transform: uppercase
+                    .contact-form-input
+                        margin-bottom: 2em
+                        padding: 0.6em 1.2em
+                        border: none
+                        border-radius: 8px
+                        font-size: 1.6rem
+                .contact-form-label
+                    margin-bottom: 1em
+                    text-transform: uppercase
+                .contact-form-textarea
+                    margin-bottom: 2em
+                    padding: 0.6em 1.2em
+                    border: none
+                    border-radius: 8px
+                    font-size: 1.6rem
+                    max-width: 100%
+                    min-width: 100%
+                    width: 100%
+                    min-height: 150px
+                .contact-form-btn
+                    align-self: flex-end
+                    padding: 1em
+                    width: 100%
+                    max-width: 300px
+                    border: 1px solid black
+                    border-radius: 8px
+                    cursor: pointer
+                    transition: color .3s, background .3s
+                .contact-form-btn:hover
+                    color: white
+                    background-color: black
+// FOOTER
+footer
+    background-color: #2e2e2e
+    color: white
+    height: 100%
+    width: 100%
+    .footer-boxes
+        display: flex
+        justify-content: center
+        align-items: center
+        
+        .footer-box
+            padding: 4rem 5rem
+            i
+                font-size: 3rem
+                padding: .4em
+                transition: color .3s
+                cursor: pointer
+                text-align: center
+            p
+                text-align: center
+            i:hover
+                color: royalblue
+        .footer-box-right
+            display: flex
+            flex-direction: column
+            h1
+                text-transform: uppercase
+                // text-align: center
+                letter-spacing: 1px
+                padding: 2rem 0
+            a
+                text-decoration: none
+                padding: 1.4rem 0
+                color: white
+    hr
+        color: white
+        width: 100%
+    p
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 1rem 0
+        span
+            padding: 0 4px
+
+
+
+
+
+// MEDIA
+
+@media (max-width: 930px)
+    main
+    .menu
+        .wrapper
+            .menu-form
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                h4
+                    padding: 10px
+                    text-align: center
+            .menu-radio
+                width: 30px
+                height: 30px
+                cursor: pointer
+@media (max-width: 440px)
+    main
+    .reviews
+        .wrapper
+            h1
+            .reviews-icons
+                flex-direction: column
+@media (max-width: 500px)
+    footer
+    .footer-boxes
+        .footer-box
+            display: none
+
+
+    
